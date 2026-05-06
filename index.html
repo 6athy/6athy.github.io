@@ -44,24 +44,28 @@
     </div>
 
     <!-- 영상 오버레이 -->
-    <div class="video-overlay" id="videoOverlay">
-      <div class="video-close" onclick="closeVideo()">✕</div>
-      <video id="my-video" controls>
-        <source src="video.mp4" type="video/mp4">
-      </video>
-    </div>
+  <div class="video-overlay" id="videoOverlay">
+  <div class="video-container">
+    <div class="video-close" onclick="closeVideo()">✕</div>
+    <iframe 
+      id="my-video"
+      src="https://drive.google.com/file/d/1dYkwm0VOZnhbS83QifD1JXe94GqJp_xQ/preview" 
+      width="840" 
+      height="480"
+      allow="autoplay" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
   </div>
 
   <script>
     function openVideo() {
       document.getElementById('videoOverlay').classList.add('active');
-      document.getElementById('my-video').play();
     }
 
     function closeVideo() {
-      document.getElementById('my-video').pause();
-      document.getElementById('my-video').currentTime = 0;
       document.getElementById('videoOverlay').classList.remove('active');
     }
   </script>
