@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>New Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Full-bleed background for this page */
+    body.new-hero {
+      background-image: url('하기싫어.png'), url('new-image.png'), url('front.png');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    /* content sits above background */
+    main.new-main {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      background: transparent;
+      padding: 2rem;
+    }
+    /* Bottom-centered CTA button */
+    .bottom-button {
+      position: fixed;
+      left: 50%;
+      bottom: 28px;
+      transform: translateX(-50%);
+      z-index: 3;
+      padding: 12px 26px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      border: 0;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      transition: transform 0.16s ease, background 0.16s ease;
+    }
+    .bottom-button:hover {
+      transform: translateX(-50%) translateY(-3px);
+      background: rgba(255,255,255,0.95);
+      color: #000;
+    }
+  </style>
+</head>
+<body class="new-hero">
+  <nav class="navbar">
+    <a href="history.html" class="navbar__logo">HISTORY OF CARS</a>
+    <ul class="navbar__links">
+      <li><a href="new.html">INTRO</a></li>
+      <li><a href="extra.html">PROJECT</a></li>
+    </ul>
+  </nav>
+
+  <main class="new-main" style="padding:120px 5% 60px; max-width:1100px; margin:0 auto;">
+    <!-- placeholder removed: ready for actual content -->
+  </main>
+  <!-- Centered bottom CTA button -->
+  <button id="new-cta" class="bottom-button" aria-label="주요 액션">더보기</button>
+
+</body>
+</body>
+  <script>
+    (function(){
+      var btn = document.getElementById('new-cta');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        window.open('https://www.youtube.com/shorts/1iYurjFTrvw', '_blank', 'noopener,noreferrer');
+      });
+    })();
+  </script>
+</html>
