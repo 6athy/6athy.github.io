@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ford GT40 Mk 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @font-face {
+      font-family: 'Milker';
+      src: url('Milker.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'MileastItalic';
+      src: url('Mileast Italic.otf') format('opentype');
+      font-weight: normal;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Apply Mileast italic to all elements on Ford page, then restore navbar */
+    body.ford-page,
+    body.ford-page * {
+      font-family: 'MileastItalic', sans-serif !important;
+    }
+
+    body.ford-page .navbar,
+    body.ford-page .navbar * {
+      font-family: 'Antonio', 'Gondens Demo', sans-serif !important;
+    }
+
+    body.ford-page .summary-title {
+      font-size: clamp(2.6rem, 4.2vw, 4.2rem);
+      line-height: 1.18;
+      max-width: 95%;
+    }
+
+    body.ford-page .summary-text__headline {
+      display: inline-block;
+      font-size: clamp(1.4rem, 2.3vw, 1.7rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    body.ford-page .summary-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body.ford-page .summary-image img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center center;
+      display: block;
+    }
+
+    body.ford-page .summary-image.summary-image--front img {
+      transform: scale(1.00) translateY(-0.15rem);
+      transform-origin: center center;
+    }
+
+    body.ford-page .summary-image.summary-image--side img {
+      transform: scale(1.10) translate(0.175rem, 0.65rem);
+      transform-origin: center center;
+    }
+
+    body.ford-page .summary-image.summary-image--rear img {
+      transform: scale(0.88);
+      transform-origin: center center;
+    }
+
+    body.ford-page {
+      background: #070913;
+    }
+
+    .highlight { color: #0c0e20; }
+    .highlight2 { color: #6294c4; }
+    .highlight3 { color: #a10000; }
+    
+    /* Increase size for the card title link on Ford page only */
+    body.ford-page .card__title a {
+      display: inline-block;
+      font-size: clamp(4.5rem, 8vw, 8rem);
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    body.ford-page .summary-label {
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
+      letter-spacing: 0.2em;
+    }
+
+    /* Force Milker for the summary paragraph and the specs list */
+    body.ford-page .summary-text,
+    body.ford-page .summary-text *,
+    body.ford-page .summary-specs,
+    body.ford-page .summary-specs * {
+      font-family: 'Milker', sans-serif !important;
+    }
+  </style>
+</head>
+<body class="ford-page">
+
+  <section class="summary-page">
+    <div class="summary-content">
+      <div class="summary-copy">
+        <span class="summary-label">Ford GT40 Mk 2</span>
+        <h2 class="summary-title">The Legendary From Le Mans Endurance Racing Championship</h2>
+        <p class="summary-text"><span class="summary-text__headline">Ford GT40 Mk 2</span>는 24시간 르망 레이스의 강자로 군림했던 전설적인 차량입니다.<br>포드의 막대한 자본력과 기술력이 결집해 탄생한 이 차량은 모터스포츠 역사에 영원히 기록될 명작입니다.</p>
+        <div class="summary-images">
+          <div class="summary-image summary-image--front">
+            <img src="front.png" alt="Ford GT40 Mk 2 Front View" />
+          </div>
+          <div class="summary-image summary-image--side">
+            <img src="side.png" alt="Ford GT40 Mk 2 Side View" />
+          </div>
+          <div class="summary-image summary-image--rear">
+            <img src="rear.png" alt="Ford GT40 Mk 2 Rear View" />
+          </div>
+        </div>
+      </div>
+      <div class="summary-specs">
+        <h3>주요 제원</h3>
+        <ul>
+          <li><strong>제조사:</strong> Ford</li>
+          <li><strong>생산년도:</strong> 1965~1967</li>
+          <li><strong>엔진:</strong> 7.0L OHV 427 CID N/A V8</li>
+          <li><strong>출력:</strong> 485HP / 65.7kg⋅m (644 N⋅m)</li>
+          <li><strong>구동:</strong> 후륜구동 (RWD / MR)</li>
+          <li><strong>무게:</strong> 약 1,100~1,200kg</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <nav class="navbar">
+    <a href="history.html" class="navbar__logo">HISTORY OF CARS</a>
+    <ul class="navbar__links">
+      <li><a href="new.html">INTRO</a></li>
+      <li><a href="extra.html">PROJECT</a></li>
+      <li><a href="#" onclick="navigateOtherPage(); return false;">OTHER</a></li>
+    </ul>
+  </nav>
+
+  <div class="card">
+    <img class="card__bg" src="Ford-GT40-2764.jpg" alt="Ford GT40 Mk 2" />
+    <div class="card__text">
+      <p class="card__overtitle"></p>
+      <h1 class="card__title">
+        <a href="https://en.wikipedia.org/wiki/Ford_GT40" target="_blank">
+          Ford GT40 Mk 2
+        </a>
+      </h1>
+      <p class="card__subtitle">The legacy of Ken Miles</p>
+    </div>
+
+    
+
+    <div class="play-btn" onclick="openVideo()">
+      <div class="play-icon"></div>
+    </div>
+
+    <div class="video-overlay" id="videoOverlay">
+      <div class="video-close" onclick="closeVideo()">✕</div>
+      <iframe id="my-video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="other.js"></script>
+  <script>
+    const driveVideoUrl = 'https://drive.google.com/file/d/1UwbXw9PNgWmZrTT_rePX1WAbYpLmr89N/preview?autoplay=1';
+
+    function openVideo() {
+      const iframe = document.getElementById('my-video');
+      iframe.src = driveVideoUrl;
+      document.getElementById('videoOverlay').classList.add('active');
+    }
+
+    function closeVideo() {
+      const iframe = document.getElementById('my-video');
+      iframe.src = '';
+      document.getElementById('videoOverlay').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
